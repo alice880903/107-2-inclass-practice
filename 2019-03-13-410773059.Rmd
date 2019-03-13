@@ -9,9 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
 Great
-
 
 ```{r}
 a <- 2
@@ -20,5 +18,18 @@ a <- 2
 
 ```{r}
 1101 -> c
+```
+```{r}
+`上學期107成績` <- 96
+```
+
+```{r}
+a<-5
+a2<-5L
+```
+
+```{r}
+class(a)
+class(a2)
 ```
 
