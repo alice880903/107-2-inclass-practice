@@ -32,4 +32,13 @@ a2<-5L
 class(a)
 class(a2)
 ```
+```{r}
+aVector<-c(5,6,7)
+a2Vector<-c(5L,6L,7L)
+```
+
+```{r}
+class(a2Vector)
+class(aVector)
+```
 
