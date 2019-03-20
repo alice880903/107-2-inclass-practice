@@ -33,4 +33,13 @@ levels(studentMajors)
 as.integer(studentMajors)
 ```
 
+```{r}
+library(lubridate)
+dtObject<-ymd_hms("1970-01-01 00:02:53") 
+```
+
+```{r}
+library(lubridate)
+dtObject<-ymd_hms("1970-11-01 00:02:53") 
+```
 
