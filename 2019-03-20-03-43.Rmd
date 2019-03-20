@@ -16,3 +16,21 @@ dialogue <- c('小明說："明天不用上課。"',
 cat(dialogue, sep="\n")
 ```
 
+```{r}
+aLogical <- c(T,TRUE,F,FALSE,FALSE)
+class(aLogical)
+```
+
+```{r}
+studentMajors <- factor(
+  c("經濟系", "經濟系", "法律系")
+)
+```
+
+```{r}
+typeof(studentMajors)
+levels(studentMajors)
+as.integer(studentMajors)
+```
+
+
