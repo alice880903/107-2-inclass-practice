@@ -24,3 +24,16 @@ twDateTime <- ymd_hms("2019-03-18 14:04:00", tz="Asia/Taipei")
 LisbonDateTime <- with_tz(twDateTime,tzone="Europe/Lisbon")
 ```
 
+```{r}
+library(lubridate)
+dtObject<-ymd_hms("1999-09-03 00:02:53")
+
+```
+
+```{r}
+dtObjectVector<-ymd_hms(
+  c("1999-09-03 00:02:53",
+    "2019-03-27 11:25:22")
+)
+```
+
