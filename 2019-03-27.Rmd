@@ -78,4 +78,8 @@ dtobject4 <- ymd("2019-08-11")
 dtobject5 <- ymd("2000-02-01")
 dtobject4-dtobject5
 ```
+```{r}
+startingDate <- ymd("2000-02-17")
+startingDate + dyears(1)
+```
 
