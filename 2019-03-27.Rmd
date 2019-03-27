@@ -4,6 +4,9 @@ author: "Alice"
 date: "3/27/2019"
 output: html_document
 ---
+```{r}
+
+```
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -35,5 +38,44 @@ dtObjectVector<-ymd_hms(
   c("1999-09-03 00:02:53",
     "2019-03-27 11:25:22")
 )
+```
+```{r}
+Sys.timezone()
+twDateTime <- ymd_hms("2019-03-18 14:04:00", tz="Asia/Taipei")
+LisbonDateTime <- with_tz(twDateTime,tzone="Europe/Lisbon")
+LisbonDateTime
+
+typeof(twDateTime)
+as.integer(twDateTime)
+as.double(twDateTime)
+typeof(LisbonDateTime)
+as.integer(LisbonDateTime)
+as.double(LisbonDateTime)
+```
+
+```{r}
+as.integer(ymd("1970-01-01") )
+as.integer(ymd("1970-01-02") )
+as.integer(ymd("2019-03-11") )
+```
+```{r}
+a <- c(1, 5, -3)
+b <- c(0.5, 12, 2)
+aL <- c(1L, 5L, -3L)
+bL <- c(-2L, -4L, 8L)
+```
+```{r}
+a+bL
+class(a+bL)
+```
+
+```{r}
+a^b
+a %% b
+```
+```{r}
+dtobject4 <- ymd("2019-08-11")
+dtobject5 <- ymd("2000-02-01")
+dtobject4-dtobject5
 ```
 
