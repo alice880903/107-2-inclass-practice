@@ -58,7 +58,6 @@ dates
 str_replace(dates,"-","月")
 ```
 
-
 ```{r}
 library(readr)
 githubData <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/githubData.csv")
@@ -85,5 +84,40 @@ year <- str_sub(birthday,1,4)
 month <- str_sub(birthday,5,6)
 day<- str_sub(birthday,7,8)
 str_c("西元",year,"年",month,"月",day,"日")
+```
+```{r}
+民國年月<-c("099/01","099/02","099/03")
+```
+
+1."099/01"變成"099","01"(str_sub)
+```{r}
+library(stringr)
+```
+
+```{r}
+民國年月<-c("099/01","099/02","099/03")
+y<- str_sub(民國年月,2,3)
+m<- str_sub(民國年月,5,6)
+y2<- as.integer(y)
+m2<- as.integer(m)
+str_c("西元",y2+1911,"年",m2,"月")
+```
+
+```{r}
+str_split(民國年月,"/")
+year <- "099"
+month <- str_sub(民國年月,5,6)
+year2 <- as.integer(year)+1911
+year2
+str_c(year2,"/",month)
+```
+
+```{r}
+b1<-list("a","b",c(1:10))
+typeof(b1)
+b2<-list(
+  第一個="a",
+  第二個="b",
+  第三個=c(1:10))
 ```
 
