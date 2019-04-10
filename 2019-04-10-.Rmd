@@ -30,4 +30,22 @@ studentID<-c(
 studentID
 str_sub(studentID,2,4)
 ```
+```{r}
+char1 <- c("月","月","月")
+char2 <- c("日","日","日")
+month <- c("3","4","5")
+day <- c("11","5","7")
+char1
+char2
+month
+day
+str_c(month,char1,day,char2)
+```
+```{r}
+chart1 <- c("月","月","月")
+chart2 <- c("日","日","日")
+month <- c("9","4","7")
+day <- c("3","3","9")
+str_c(month,chart1,day,chart2)
+```
 
