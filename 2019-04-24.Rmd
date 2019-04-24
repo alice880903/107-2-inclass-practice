@@ -10,3 +10,24 @@ a <- matrix(c(1:6), nrow=3, ncol=2)
 a
 ```
 
+```{r}
+m2<-matrix(c("a","b","c","d"),2,2)
+class(m2)
+typeof(m2)
+a<-m2[[1]]
+c<-m2[[3]]
+bd<-m2[2,]
+a
+c
+bd
+```
+
+```{r}
+MAT2 <- matrix(c("a","b","c","d"),2,2)
+MAT2
+class(MAT2)
+typeof(MAT2)
+MAT2[[2]]
+MAT2[c(T,F,F,T)]
+```
+
