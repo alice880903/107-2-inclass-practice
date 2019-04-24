@@ -87,4 +87,16 @@ StuDF2 <- data.frame(
   )
 StuDF2 
 ```
+```{r}
+chosenLETTERS <- LETTERS[1:15]
+matObj1 <- matrix(chosenLETTERS,5,3)
+matObj1
+```
+```{r}
+chosenLETTERS[8]
+matObj1[8]
+matObj1
+matObj1[3,2] 
+matObj1[c(F,F,TRUE,F,F),c(F,TRUE,F)]
+```
 
