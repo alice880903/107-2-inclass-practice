@@ -5,3 +5,8 @@ date: "4/24/2019"
 output: html_document
 ---
 
+```{r}
+a <- matrix(c(1:6), nrow=3, ncol=2)
+a
+```
+
