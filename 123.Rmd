@@ -1,0 +1,49 @@
+---
+title: "Untitled"
+author: "Alice"
+date: "2019年5月8日"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+sample(99:103,15,replace = T)-> yy
+sample(1:12,15,replace=T)-> mm
+str_c("民國",str_pad(yy,3,"left","0"),"年",mm,"月") -> twDates
+twDates
+str_replace(twDates,"民國","") -> x1
+x1
+str_replace(x1,"月","") -> twDates2
+twDates2
+ str_replace_all(twDates,"(民國)|(月)","")
+```
+```{r}
+twDates
+str_sub(twDates,3,5) -> yearCharacter
+yearCharacter
+ as.integer(yearCharacter)+1911 -> westYears
+westYears
+```
+
+```{r}
+twDates2
+str_split(twDates2,"年") -> datesSplitList
+datesSplitList
+
+map(datesSplitList,~.[[2]]) -> monthList
+monthList
+
+unlist(monthList) -> monthVector
+monthVector
+
+str_c(as.character(westYears),monthVector,"01",sep = "-") -> westDates
+westDates
+
+ymd(westDates) -> westDates
+westDates
+class(westDates)
+```
+
