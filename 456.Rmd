@@ -62,7 +62,30 @@ b[[5]]<-7
 b
 ```
 ```{r}
+library(readr)
+classSurvey <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/classSurvey.csv")
+```
+```{r}
+library(readr)
+exData3 <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/exData3.csv",
+                    col_types = cols(
+                      匯率 = col_number(),
+                      期間 = col_character()))
+```
 
+```{r}
+library(lubridate)
+time3<- exData3$期間
+time3<- ymd(time3)
+time3-> exData3$期間
+
+class(exData3$期間)
+```
+```{r}
+exData3$期間 -> date1
+date2 <- ymd(date1)
+exData3$期間 <- c(date2)
+exData3
 ```
 
 
