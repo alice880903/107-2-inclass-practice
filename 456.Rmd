@@ -385,4 +385,127 @@ exData3[logiAsiaCrisis, ]
 exData3[exData3$isAsiaCrisis==T ,]
 
 ```
+```{r}
+
+exData3[exData3$isAsiaCrisis==T ,]
+
+exData3[exData3$isAsiaCrisis, ]
+
+```
+
+
+
+
+
+```{r}
+
+exampleDF <- data.frame(
+
+  exchangeRate=c(22,3,3,2,7,12,13),
+
+  isAsiaCrisis=c(T,T,F,F,F,T,T)
+
+)
+
+exampleDF
+
+```
+```{r}
+
+exampleDF[c(1,2,6,7),]
+
+exampleDF[c(T,T,F,F,F,T,T), ]
+
+```
+
+
+
+```{r}
+
+library(readr)
+
+transcriptDataFinal <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/transcriptDataFinal.csv")
+
+```
+
+
+
+```{r}
+
+names(transcriptDataFinal)
+
+```
+
+
+
+學號“92aS67fee”子樣本
+
+```{r}
+
+
+
+```
+
+
+
+
+
+## function
+
+
+
+```{r}
+
+utility_cobb_douglass <- function(x,y,.alpha,.beta){
+
+  utilValue <- x^.alpha*y^.beta # 程序產生output值
+
+  return(utilValue) # 傳回output值
+
+}
+
+```
+
+
+
+```{r}
+
+class(utility_cobb_douglass)
+
+```
+
+
+
+```{r}
+
+utility_cobb_douglass(1,2,0.5,0.8)
+
+```
+
+
+
+$$f(x,\alpha)=\alpha+x$$
+
+```{r}
+
+myfun <- function(x,alpha){
+
+  f_value <- alpha+x
+
+  return(f_value)
+
+}
+
+```
+
+
+
+```{r}
+
+myfun(1,0.5)
+
+myfun(-2,3)
+
+```
+
 
