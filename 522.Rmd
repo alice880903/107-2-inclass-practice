@@ -36,5 +36,21 @@ invoiceList$UTC時間[tpLogical] <- with_tz(tpDateTime,tzone="UTC")
 
 invoiceList 
 ```
+```{r}
+invoiceList$訂單時區 == "America/New_York" -> nyLogical
+invoiceList$訂單時區 == "Asia/Taipei" -> tpLogical
+invoiceList$nyLogical <- nyLogical
+invoiceList$tpLogical <- tpLogical
+
+nyDateTime<-ymd_hms(invoiceList$訂單時區之下單時間[nyLogical],tz="America/New_York")
+
+tpDateTime<-ymd_hms(invoiceList$訂單時區之下單時間[tpLogical],tz="Asia/Taipei")
+
+invoiceList$UTC時間[nyLogical] <- with_tz(nyDateTime,tz="UTC")
+
+invoiceList$UTC時間[tpLogical] <- with_tz(tpDateTime,tz="UTC")
+
+invoiceList
+```
 
 
