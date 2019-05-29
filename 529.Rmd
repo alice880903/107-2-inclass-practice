@@ -10,6 +10,12 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r}
-
+date_convert_twYM <- function(x,dd=01){
+  yyyy<-as.integer(str_extract(x,"(?<=(民國))[:digit:]+"))+1911
+  mm<-str_extract(x,"[:digit:]+(?=月)")
+  yyyymmdd <- ymd(str_c(yyyy,mm,dd,sep="-"))
+  y <- ymd(yyyymmdd)
+  return(y)
+}
 ```
 
