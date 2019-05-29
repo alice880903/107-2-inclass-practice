@@ -5,10 +5,6 @@ date: "2019年5月29日"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 ```{r}
 textbookURL <- function(){
 browseURL("https://via.hypothes.is/https://bookdown.org/tpemartin/ntpu-programming-for-data-science/")
